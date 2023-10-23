@@ -7,18 +7,13 @@ const links = [
   },
   {
     ref: '02',
-    name: 'About',
-    href: '/about',
+    name: 'Contact Us',
+    href: '/contact',
   },
   {
     ref: '03',
-    name: 'Pricing',
-    href: '/pricing',
-  },
-  {
-    ref: '04',
-    name: 'Contact',
-    href: '/contact',
+    name: 'Referral',
+    href: '/referral',
   },
 ];
 ---
@@ -37,13 +32,13 @@ const links = [
         href="/"
         class="focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200 rounded-md focus-visible:outline focus-visible:outline-2"
       >
-        <span class="sr-only">Stone</span>
+        <span class="sr-only">Home Preferred Solution</span>
         <img
-          class="h-8 w-auto"
-          width="65"
-          height="40"
-          :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'"
-          alt="Stone"
+          class="h-8 md:h-12 lg:h-14 w-auto"
+          width="182"
+          height="50"
+          :src="$store.theme.isDark ? '/assets/logo.png' : '/assets/logo.png'"
+          alt="Home Preferred Solution"
         />
       </a>
     </div>
@@ -139,10 +134,10 @@ const links = [
         class="bg-primary-500/10 dark:bg-primary-400/10 hidden items-center justify-center rounded-3xl px-6 py-8 lg:flex"
       >
         <p
-          class="text-primary-950/70 dark:text-primary-200/70 max-w-sm text-xl italic leading-loose"
+          class="text-primary-950/70 dark:text-primary-200/70 max-w-md text-xl italic leading-loose"
         >
-          <span class="font-medium">Stone</span> is a premium Astro theme specially designed for
-          Business, Marketing, SaaS and Startup websites.
+          <span class="font-medium">Home Preferred Solution</span> is a leading provider of comprehensive home health services to private individuals, case managers, physicians, nursing homes, hospitals, insurance companies and health maintenance organizations. If you, a loved one or someone you know is in need of home health care services, take a few minutes to discover what Home Preferred Solution has to offer. You’ll see that we truly exceed your expectations.
+
         </p>
       </div>
 
@@ -160,7 +155,7 @@ const links = [
                   <span class="group-hover:underline">{link.name}</span>
                 </div>
                 <svg
-                  class="text-primary-600 dark:text-primary-400 h-6 w-6 sm:h-8 sm:w-8"
+                  class="text-primary-600 dark:text-primary-400 h-6 w-6 sm:h-8 sm:w-8 rotate-45"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"

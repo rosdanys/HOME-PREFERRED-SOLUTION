@@ -1,4 +1,5 @@
 ---
+import { SEO } from "astro-seo";
 import '@fontsource/inter/latin-400.css';
 import '@fontsource/inter/latin-500.css';
 import { ViewTransitions } from 'astro:transitions';
@@ -11,6 +12,18 @@ interface Props {
 }
 
 const { description, title } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const resolvedImageWithDomain = new URL(
+  "/opengraph.jpg",
+  Astro.site
+).toString();
+
+const makeTitle = title
+  ? title + " | " + "Home Preferred Solution"
+  : "Home Preferred Solution - Is ......";
+
 ---
 
 <!DOCTYPE html>
@@ -24,8 +37,24 @@ const { description, title } = Astro.props;
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <title>{title}</title>
+    <title>{makeTitle}</title>
     <ViewTransitions />
+    <SEO
+      title={makeTitle}
+      description="Home Preferred Solution is a leading provider of comprehensive home health services to private individuals, case managers, physicians, nursing homes, hospitals, insurance companies and health maintenance organizations. If you, a loved one or someone you know is in need of home health care services, take a few minutes to discover what Home Preferred Solution has to offer. You’ll see that we truly exceed your expectations."
+      canonical={canonicalURL}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `Home Preferred Solution`,
+          image: resolvedImageWithDomain,
+        },
+        image: {
+          alt: "Home Preferred Solution Homepage Screenshot",
+        },
+      }}
+      />
   </head>
   <body
     class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition"

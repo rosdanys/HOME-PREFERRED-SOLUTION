@@ -1,21 +1,19 @@
 ---
-import About from '../components/home/About.astro';
-import Cta from '../components/home/Cta.astro';
-import Expertise from '../components/home/Expertise.astro';
+import Download from '@components/home/Download.astro';
+import Carousel from '../components/Carousel.astro';
 import Hero from '../components/home/Hero.astro';
-import Services from '../components/home/Services.astro';
-import Testimonials from '../components/home/Testimonials.astro';
 import Layout from '../layouts/Layout.astro';
+import WithUs from '@components/home/WithUs.astro';
+import Programs from '@components/home/Programs.astro';
 ---
 
 <Layout
-  description="Stone is a premium Astro theme specially designed for Business, Marketing, SaaS and Startup websites."
-  title="Stone · Premium Astro template"
+  description=""
+  title="Home"
 >
-  <Hero />
-  <Services />
-  <Expertise />
-  <About />
-  <Testimonials />
-  <Cta />
+<Carousel/>
+<Hero />
+<Download/>
+<Programs/>
+<WithUs/>
 </Layout>
