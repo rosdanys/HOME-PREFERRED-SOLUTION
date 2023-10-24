@@ -1,10 +1,10 @@
 export function CarouselItem({ item }) {
   return (
     <>
-      <section  className="relative w-full isolate overflow-hidden py-24 sm:py-32 item">      
+      <section  className="relative w-full isolate overflow-hidden py-24 sm:py-32 item-css">      
         <div className="inset-0 -z-10 bg-image">
           <img
-            className="mx-auto lg:object-cover md:object-center"
+            className="mx-auto object-cover"
             src={item.img}
             alt={item.title}
           />
