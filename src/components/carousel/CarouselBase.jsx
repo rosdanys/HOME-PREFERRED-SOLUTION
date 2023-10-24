@@ -16,22 +16,42 @@ const dataSlides = [
     title: "HOME PREFERRED SOLUTION",
     subtitle: "-Best home health care, awesome care givers.-",
     sign: "Yohana Terry",
-    img: "/assets/01banner.jpg",
-  },
-  {
-    id:"02",
-    title: "HOME PREFERRED SOLUTION",
-    subtitle:
-      "-Excellent team! The phisical therapy was amazing to say the least.-",
-    sign: "Peter Garcia",
-    img: "/assets/02banner.jpg",
+    img: "/assets/1937848612.jpg",
   },
   {
     id:"03",
     title: "HOME PREFERRED SOLUTION",
     subtitle: "-Equipo de primera. Atendieron a mi mama fenomenalmente bien.-",
     sign: "Omar Kindelan",
-    img: "/assets/03banner.jpg",
+    img: "/assets/150773027.jpg",
+  },
+  {
+    id:"04",
+    title: "HOME PREFERRED SOLUTION",
+    subtitle: "-Equipo de primera. Atendieron a mi mama fenomenalmente bien.-",
+    sign: "Omar Kindelan",
+    img: "/assets/1416346082.jpg",
+  },
+  {
+    id:"05",
+    title: "HOME PREFERRED SOLUTION",
+    subtitle: "-Equipo de primera. Atendieron a mi mama fenomenalmente bien.-",
+    sign: "Omar Kindelan",
+    img: "/assets/1910306026.jpg",
+  },
+  {
+    id:"06",
+    title: "HOME PREFERRED SOLUTION",
+    subtitle: "-Equipo de primera. Atendieron a mi mama fenomenalmente bien.-",
+    sign: "Omar Kindelan",
+    img: "/assets/2157169755.jpg",
+  },
+  {
+    id:"07",
+    title: "HOME PREFERRED SOLUTION",
+    subtitle: "-Equipo de primera. Atendieron a mi mama fenomenalmente bien.-",
+    sign: "Omar Kindelan",
+    img: "/assets/240339163.jpg",
   },
 ];
 

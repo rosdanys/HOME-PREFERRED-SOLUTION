@@ -55,3 +55,11 @@
     overflow: hidden;
     background-attachment: fixed;
 }
+
+.item{
+  @media (min-width: 768px) {   
+   
+    height:calc(100vh - 104px);
+    
+  }
+}

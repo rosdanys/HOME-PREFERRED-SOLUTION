@@ -1,18 +1,17 @@
 export function CarouselItem({ item }) {
   return (
     <>
-      <section className="relative w-full max-h-full  isolate overflow-hidden  px-6 py-24 sm:py-32 lg:px-8">
-      
+      <section  className="relative w-full isolate overflow-hidden py-24 sm:py-32 item">      
         <div className="inset-0 -z-10 bg-image">
           <img
-            className="mx-auto object-cover "
+            className="mx-auto lg:object-cover md:object-center"
             src={item.img}
-            alt={item.subtitle}
+            alt={item.title}
           />
         <div className="mask opacity-30 bg-primary-950 "></div>
         </div>
         
-        <div className="mx-auto max-w-2xl lg:max-w-4xl ">
+        {/* <div className="mx-auto max-w-2xl lg:max-w-4xl ">
           <figure className="lg:mt-10 md:mt-5 mt-2">
             <blockquote className="text-center text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
               <p>{item.subtitle}</p>
@@ -23,7 +22,7 @@ export function CarouselItem({ item }) {
               </div>
             </figcaption>
           </figure>
-        </div>       
+        </div>  */}      
       </section>
     </>
   );
