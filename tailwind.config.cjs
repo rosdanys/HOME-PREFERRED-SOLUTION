@@ -6,11 +6,24 @@ module.exports = {
   darkMode: 'class',
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
+   
     colors: {
       current: 'currentColor',
       transparent: 'transparent',
       white: '#ffffff',
-      primary: colors.stone,
+      'primary': {
+        50: '#f3f7fc',
+        100: '#e6f0f8',
+        200: '#c8deef',
+        300: '#98c4e1',
+        400: '#61a6cf',
+        500: '#4e98c5',
+        600: '#2c6e9d',
+        700: '#25597f',
+        800: '#224c6a',
+        900: '#214059',
+        950: '#16293b',
+    },
     },
     fontFamily: {
       sans: ['Inter', 'sans-serif'],

@@ -1,4 +1,5 @@
 ---
+import Container from "@components/Container.astro";
 const testimonials = [
   {
     name: 'Yohana Terry',
@@ -17,7 +18,7 @@ const testimonials = [
   },
 ];
 ---
-
+<Container>
 <section class="py-16 sm:py-20">
   <div class="v mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col items-center gap-12 lg:gap-20">
@@ -59,3 +60,4 @@ const testimonials = [
     </div>
   </div>
 </section>
+</Container>

@@ -59,10 +59,11 @@ import Container from '@components/Container.astro';
               suscipit eaque, iste dolor cupiditate blanditiis ratione.
             </p>
           </dd>
-        </div><div
+        </div>
+        <div
           class="rounded-3xl px-4 transition"
           x-bind:class="{ 'bg-primary-500/10 dark:bg-primary-400/10': isOpen }"
-          x-data="{ id: 1, get isOpen() { return this.id === this.selected }, get isNextOpen() { return (this.id + 1) === this.selected } }"
+          x-data="{ id: 4, get isOpen() { return this.id === this.selected }, get isNextOpen() { return (this.id + 1) === this.selected } }"
         >
           <dt
             class="border-b border-primary-900/10 text-lg transition dark:border-primary-300/10"
@@ -78,7 +79,7 @@ import Container from '@components/Container.astro';
               ><div
                 class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200"
               >
-                <span class="font-medium">Full Medicare and Medicaid waiver</span>
+                <span class="font-medium">Full Medicare</span>
                 <span class="ml-6 flex h-7 items-center"
                   ><svg
                     aria-hidden="true"
@@ -107,7 +108,57 @@ import Container from '@components/Container.astro';
               suscipit eaque, iste dolor cupiditate blanditiis ratione.
             </p>
           </dd>
-        </div><div
+        </div>
+        <div
+          class="rounded-3xl px-4 transition"
+          x-bind:class="{ 'bg-primary-500/10 dark:bg-primary-400/10': isOpen }"
+          x-data="{ id: 1, get isOpen() { return this.id === this.selected }, get isNextOpen() { return (this.id + 1) === this.selected } }"
+        >
+          <dt
+            class="border-b border-primary-900/10 text-lg transition dark:border-primary-300/10"
+            x-bind:class="{ 'border-transparent': isOpen || isNextOpen, 'border-primary-900/10 dark:border-primary-300/10': !(isOpen || isNextOpen) }"
+          >
+            <button
+              class="group block w-full py-6 text-left transition focus-visible:outline-none"
+              type="button"
+              aria-controls="expertise-2"
+              aria-expanded="false"
+              x-bind:aria-expanded="isOpen.toString()"
+              x-on:click="toggle(id)"
+              ><div
+                class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200"
+              >
+                <span class="font-medium">Medicaid Waiver</span>
+                <span class="ml-6 flex h-7 items-center"
+                  ><svg
+                    aria-hidden="true"
+                    class="h-6 w-6 rotate-0 transform text-primary-600 transition duration-200 ease-in-out dark:text-primary-400"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    x-bind:class="{ '-rotate-180': isOpen, 'rotate-0': !isOpen }"
+                    ><path
+                      d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"
+                    ></path></svg
+                  ></span
+                >
+              </div></button
+            >
+          </dt><dd
+            class="pb-6 pr-6"
+            id="expertise-2"
+            x-collapse=""
+            x-show="isOpen"
+            style="height: 0px; overflow: hidden; display: none;"
+            hidden=""
+          >
+            <p class="text-base text-primary-950/70 dark:text-primary-200/70">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis
+              suscipit eaque, iste dolor cupiditate blanditiis ratione.
+            </p>
+          </dd>
+        </div>
+        <div
           class="rounded-3xl px-4 transition"
           x-bind:class="{ 'bg-primary-500/10 dark:bg-primary-400/10': isOpen }"
           x-data="{ id: 2, get isOpen() { return this.id === this.selected }, get isNextOpen() { return (this.id + 1) === this.selected } }"
@@ -126,7 +177,7 @@ import Container from '@components/Container.astro';
               ><div
                 class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200"
               >
-                <span class="font-medium">Medicare Free</span>
+                <span class="font-medium">Behavior Care</span>
                 <span class="ml-6 flex h-7 items-center"
                   ><svg
                     aria-hidden="true"
@@ -155,7 +206,8 @@ import Container from '@components/Container.astro';
               suscipit eaque, iste dolor cupiditate blanditiis ratione.
             </p>
           </dd>
-        </div><div
+        </div>
+        <div
           class="rounded-3xl px-4 transition"
           x-bind:class="{ 'bg-primary-500/10 dark:bg-primary-400/10': isOpen }"
           x-data="{ id: 3, get isOpen() { return this.id === this.selected }, get isNextOpen() { return (this.id + 1) === this.selected } }"
@@ -174,7 +226,7 @@ import Container from '@components/Container.astro';
               ><div
                 class="flex items-center justify-between rounded-3xl group-focus-visible:outline group-focus-visible:outline-2 group-focus-visible:outline-offset-2 group-focus-visible:outline-primary-950 dark:group-focus-visible:outline-primary-200"
               >
-                <span class="font-medium">HMO</span>
+                <span class="font-medium">Medicare Advantage Plans</span>
                 <span class="ml-6 flex h-7 items-center"
                   ><svg
                     aria-hidden="true"
