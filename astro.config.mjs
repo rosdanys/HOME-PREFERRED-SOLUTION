@@ -11,6 +11,6 @@ export default defineConfig({
   experimental: {
     viewTransitions: true
   },
-  site: isProd? 'https://home-preferred-solution.vercel.app/':"http://localhost:3000",
+  site: isProd? 'https://homepreferredsolution.com/':"http://localhost:3000",
   integrations: [react(),tailwind(), compress()]
 });
