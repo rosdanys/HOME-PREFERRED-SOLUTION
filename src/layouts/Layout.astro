@@ -1,5 +1,5 @@
 ---
-import { SEO } from "astro-seo";
+import { SEO } from 'astro-seo';
 import '@fontsource/inter/latin-400.css';
 import '@fontsource/inter/latin-500.css';
 import { ViewTransitions } from 'astro:transitions';
@@ -13,22 +13,23 @@ interface Props {
 
 const { description, title } = Astro.props;
 
+const descriptionSeo =
+  'Home Preferred Solution is the right choice to provide personalized, humane and ethical care to each of our patients during their home health care. Each new or current patient is an honor for us and we give them sincere compassion and empathy.';
+const authorSeo = 'Home Preferred Solution';
+
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
-  Astro.site
-).toString();
+const socialImageURL = new URL('/opengraph.jpg', Astro.site).toString();
 
 const makeTitle = title
-  ? title + " | " + "Home Preferred Solution"
-  : "Home Preferred Solution - Is ......";
-
+  ? title + ' | ' + 'Home Preferred Solution'
+  : 'Home Preferred Solution - Is ......';
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" x-cloak x-data :class="{ 'dark': $store.theme.isDark }">
   <head>
+    <!-- Global Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -36,28 +37,51 @@ const makeTitle = title
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
+
+    <!-- Primary Meta Tags -->
     <title>{makeTitle}</title>
-    <ViewTransitions />
-    <SEO
-      title={makeTitle}
-      description="Home Preferred Solution is the right choice to provide personalized, humane and ethical care to each of our patients during their home health care. Each new or current patient is an honor for us and we give them sincere compassion and empathy."
-      canonical={canonicalURL}
+
+    <!-- SEO -->
+    <meta name="title" content={makeTitle} />
+    <meta name="description" content={descriptionSeo} />
+    <meta name="author" content={authorSeo} />
+
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={'website'} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={makeTitle} />
+    <meta property="og:description" content={descriptionSeo} />
+    <meta property="og:image" content={socialImageURL} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={makeTitle} />
+    <meta property="twitter:description" content={descriptionSeo} />
+    <meta property="twitter:image" content={socialImageURL} />
+
+    <!-- <SEO      
+      canonical={canonicalURL}      
+      title = {makeTitle}
+      description={descriptionSeo}
       openGraph={{
         basic: {
+          title: "Home Preferred Solution",
           url: canonicalURL,
           type: "website",
-          title: `Home Preferred Solution`,
-          image: resolvedImageWithDomain,
+          image: socialImageURL,
         },
         image: {
           alt: "Home Preferred Solution Homepage Screenshot",
         },
       }}
-      />
+      /> -->
+    <ViewTransitions />
   </head>
   <body
-    class="bg-primary-50 text-primary-950 dark:bg-primary-950 dark:text-primary-200 antialiased transition"
+    class="bg-primary-50 text-primary-950 antialiased transition dark:bg-primary-950 dark:text-primary-200"
   >
     <Header />
     <main>
